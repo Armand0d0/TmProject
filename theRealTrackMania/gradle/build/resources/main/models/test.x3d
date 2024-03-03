@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<X3D>
+<Scene>
+<Transform>
+<Transform>
+<Group>
+<Shape>
+<Appearance>
+<ImageTexture DEF="IM_tex_png"
+url='"C:/Users/arman/..Dev/workspace/Moteur-3D/rescources/textures/tex.png" "tex.png" "C:/Users/arman/Documents/../..Dev/workspace/Moteur-3D/rescources/textures/tex.png"'
+ />
+</Appearance>
+</Shape>
+</Group>
+</Transform>
+</Transform>
+</Scene>
+</X3D>

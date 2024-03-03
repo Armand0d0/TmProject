@@ -1,0 +1,56 @@
+import org.gradle.internal.os.OperatingSystem
+
+
+plugins {
+    id 'java'
+}
+
+
+group 'Me'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 1.8
+
+
+project.ext.lwjglVersion = "3.2.1"
+project.ext.jomlVersion = "1.9.14"
+
+switch ( OperatingSystem.current() ) {
+    case OperatingSystem.WINDOWS:
+        project.ext.lwjglNatives = "natives-windows"
+        break
+    case OperatingSystem.LINUX:
+        project.ext.lwjglNatives = "natives-linux"
+        break
+    case OperatingSystem.MAC_OS:
+        project.ext.lwjglNatives = "natives-macos"
+        break
+}
+
+repositories {
+    mavenCentral()
+   // maven { url "https://oss.sonatype.org/content/repositories/snapshots/" }
+}
+jar {
+    manifest {
+        attributes 'Main-Class': 'main.MainMoteur3D'
+        
+    }
+}
+
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+    compile 'org.l33tlabs.twl:pngdecoder:1.0'
+    //implementation "org.joml:joml:$jomlVersion"
+    implementation "org.lwjgl:lwjgl:$lwjglVersion"
+    implementation "org.lwjgl:lwjgl-glfw:$lwjglVersion"
+    implementation "org.lwjgl:lwjgl-opengl:$lwjglVersion"
+    implementation "org.lwjgl:lwjgl-stb:$lwjglVersion"
+    runtimeOnly "org.lwjgl:lwjgl:$lwjglVersion:$lwjglNatives"
+    runtimeOnly "org.lwjgl:lwjgl-glfw:$lwjglVersion:$lwjglNatives"
+    runtimeOnly "org.lwjgl:lwjgl-opengl:$lwjglVersion:$lwjglNatives"
+    runtimeOnly "org.lwjgl:lwjgl-stb:$lwjglVersion:$lwjglNatives"
+    implementation "org.joml:joml:$jomlVersion"
+
+}
+

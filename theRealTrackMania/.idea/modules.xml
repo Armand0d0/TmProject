@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/Moteur-3D.iml" filepath="$PROJECT_DIR$/Moteur-3D.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Moteur-3D.main.iml" filepath="$PROJECT_DIR$/.idea/modules/Moteur-3D.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Moteur-3D.test.iml" filepath="$PROJECT_DIR$/.idea/modules/Moteur-3D.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/gradle.Moteur-3D.iml" filepath="$PROJECT_DIR$/.idea/modules/gradle.Moteur-3D.iml" />
+    </modules>
+  </component>
+</project>
